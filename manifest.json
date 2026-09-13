@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.pyasma.pomo",
+  "name": "Pomo",
+  "version": "1.0.0",
+  "author": "Pranya Sharma",
+  "license": "MIT",
+  "description": "Tasks, a pomodoro timer, and a streak on fire — the Omarchy shell face of the pomo CLI.",
+  "kinds": ["service", "bar-widget"],
+  "entryPoints": {
+    "service": "Service.qml",
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Pomo",
+    "description": "Timer ring with the task list in a popup, and flames for the streak.",
+    "category": "Time",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "pomoPath": "",
+      "showMinutes": false
+    },
+    "schema": [
+      {
+        "key": "pomoPath",
+        "type": "string",
+        "label": "Path to the pomo executable (empty = ~/.local/bin/pomo)"
+      },
+      {
+        "key": "showMinutes",
+        "type": "boolean",
+        "label": "Print the minutes left next to the ring"
+      }
+    ]
+  }
+}
